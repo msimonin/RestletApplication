@@ -46,3 +46,7 @@ Open another shell and run :
 ```
 curl localhost:4001
 ```
+
+## Run from sources
+
+Clone the repository, compile, run and test.
