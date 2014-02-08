@@ -27,9 +27,9 @@
   </distributionManagement>
 
   <scm>
-    <connection>scm:git:http://github.com/snoozesoftware/snoozenode.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/snoozesoftware/snoozenode.git</developerConnection>
-    <url>https://github.com/snoozesoftware/snoozenode.git</url>
+    <connection>scm:git:http://github.com/msimonin/RestletApplication.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/msimonin/RestletApplication.git</developerConnection>
+    <url>https://github.com/msimonin/RestletApplication.git</url>
   </scm>
 
   <repositories>
