@@ -3,6 +3,7 @@ package org.inria.myriads.database;
 import java.util.ArrayList;
 
 import org.inria.myriads.grid.Grid;
+import org.inria.myriads.rest.exception.AlreadyDefinedClusterException;
 import org.inria.myriads.rest.resource.grid.cluster.Cluster;
 
 /**
@@ -61,6 +62,30 @@ public class MyGridDatabase
     public ArrayList<Cluster> getClusters() 
     {
         return grid_.getClusters();
+    }
+
+    /**
+     * 
+     * Creates a new cluster.
+     * 
+     * @param name           The cluster
+     * @return                  The newly created clusters
+     * @throws AlreadyDefinedClusterException   Exception.
+     */
+    public Cluster createCluster(String name) throws AlreadyDefinedClusterException 
+    {
+        ArrayList<Cluster> clusters = grid_.getClusters();
+        for (Cluster registeredCluster : clusters)
+        {
+            if (name.equals(registeredCluster.getUuid()))
+            {
+                throw new AlreadyDefinedClusterException();
+            }
+        }
+        Cluster cluster = new Cluster();
+        cluster.setUuid(name);
+        clusters.add(cluster);
+        return cluster;
     }
     
     

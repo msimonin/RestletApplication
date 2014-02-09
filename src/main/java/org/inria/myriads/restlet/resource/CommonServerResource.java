@@ -63,6 +63,23 @@ public class CommonServerResource extends ServerResource
     
     /**
      * 
+     * Set allow header.
+     * 
+     * @param allow allow header to set
+     */
+    @SuppressWarnings("unchecked")
+    protected void setHeadersAllow(String allow)
+    {
+        Series<Header> responseHeaders = (Series<Header>) getResponse().getAttributes().get("org.restlet.http.headers");
+        if (responseHeaders == null) 
+        {
+            responseHeaders = new Series<Header>(Header.class);
+            getResponse().getAttributes().put("org.restlet.http.headers", responseHeaders);
+        }
+        responseHeaders.add(new Header("Allow", allow));
+    }
+    /**
+     * 
      * Gets the backend.
      * 
      * @return the backend.

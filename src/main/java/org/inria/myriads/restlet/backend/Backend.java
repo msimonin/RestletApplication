@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.inria.myriads.database.MyGridDatabase;
 import org.inria.myriads.grid.Grid;
+import org.inria.myriads.rest.exception.AlreadyDefinedClusterException;
 import org.inria.myriads.rest.resource.grid.cluster.Cluster;
 import org.inria.myriads.restlet.configurator.api.Configuration;
 
@@ -52,6 +53,20 @@ public class Backend
     public ArrayList<Cluster> getClusters() 
     {
         return database_.getClusters();
+    }
+
+
+    /**
+     * 
+     * Create a new cluster.
+     * 
+     * @param name      Cluster name
+     * @return  The newly created cluster.
+     * @throws AlreadyDefinedClusterException 
+     */
+    public Cluster createCluster(String name) throws AlreadyDefinedClusterException 
+    {
+        return database_.createCluster(name);
     }
 
 }
