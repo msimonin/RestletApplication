@@ -3,8 +3,13 @@ RESTlet Sample Application
 
 This is an archetype with a application skeleton to demonstrate the use of the RESTlet framework.
 
-## Getting the archetype 
+# Running from the sources
 
+Clone the repository, compile, run and test.
+
+# Getting the archetype 
+
+Alternatively, if you want to integrates this to your work you can download the archetype skeleton.
 ```
 mvn archetype:generate -DarchetypeCatalog=http://snooze.inria.fr/maven
 ```
@@ -47,6 +52,4 @@ Open another shell and run :
 curl localhost:4001
 ```
 
-## Run from sources
 
-Clone the repository, compile, run and test.
