@@ -50,7 +50,7 @@ java -jar uber[...] ../configs/application.cfg yourlogfile
 Open another shell and run : 
 
 ```
-curl localhost:4001
+curl localhost:4001/1.0
 ```
 
 
