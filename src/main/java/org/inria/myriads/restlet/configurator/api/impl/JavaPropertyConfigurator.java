@@ -48,7 +48,7 @@ public final class JavaPropertyConfigurator
     private static final Logger log_ = LoggerFactory.getLogger(JavaPropertyConfigurator.class);
     
     /** NodeParams. */
-    private Configuration Configuration_;
+    private Configuration configuration_;
         
     /** Properties. */
     private Properties properties_;
@@ -63,7 +63,7 @@ public final class JavaPropertyConfigurator
     public JavaPropertyConfigurator(String configurationFile) 
         throws ConfiguratorException, IOException
     {
-        Configuration_ = new Configuration();
+        configuration_ = new Configuration();
           
         properties_ = new Properties();    
         FileInputStream fileInput = new FileInputStream(configurationFile);
@@ -79,7 +79,7 @@ public final class JavaPropertyConfigurator
     @Override
     public Configuration getImageServiceConfiguration() 
     {
-        return Configuration_;
+        return configuration_;
     }
     
     /**
@@ -91,7 +91,7 @@ public final class JavaPropertyConfigurator
     private void setNetworkingSettings() 
         throws ConfiguratorException, UnknownHostException 
     {
-        NetworkingSettings networkingSettings = Configuration_.getNetworkingSettings();
+        NetworkingSettings networkingSettings = configuration_.getNetworkingSettings();
         String listenAddress = properties_.getProperty("network.listen.address");
         if (listenAddress != null)
         {

@@ -33,6 +33,9 @@ public class NetworkingSettings
         return listenAddress_;
     }
     
+    /**
+     * @param address   The address to set.
+     */
     public void setListenAddress(NetworkAddress address)
     {
         listenAddress_ = address;

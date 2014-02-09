@@ -1,7 +1,8 @@
 package org.inria.myriads.restlet.application;
 
 
-import org.inria.myriads.restlet.resource.Resource;
+import org.inria.myriads.restlet.resource.ClustersResource;
+import org.inria.myriads.restlet.resource.RootResource;
 import org.restlet.Application;
 import org.restlet.Context;
 import org.restlet.Restlet;
@@ -36,7 +37,10 @@ public class RestletApplication extends Application
     public Restlet createInboundRoot() 
     {  
          Router router = new Router(getContext());  
-         router.attach("/", Resource.class);
+         router.attach("/1.0", RootResource.class);
+         router.attach("/1.0/", RootResource.class);
+         router.attach("/1.0/clusters", ClustersResource.class);
+         router.attach("/1.0/clusters/", ClustersResource.class);
          return router;  
     }
 
