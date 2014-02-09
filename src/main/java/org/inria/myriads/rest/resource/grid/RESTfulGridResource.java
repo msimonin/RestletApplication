@@ -17,7 +17,7 @@ public class RESTfulGridResource extends RESTfulItem implements Serializable
     private static final long serialVersionUID = 1L;
 
     /** uuid.*/
-    private String uuid_;
+    private String uid_;
     
     /**
      * Constructor. 
@@ -34,12 +34,18 @@ public class RESTfulGridResource extends RESTfulItem implements Serializable
     public RESTfulGridResource(Grid grid, Reference reference) 
     {        
        super();
-       uuid_ = grid.getName();
+       uid_ = grid.getName();
        addLink(
                reference.getPath() + "/clusters ",
                "clusters",
-               "application/vnd.grid5000.fr+json",
+               "application/vnd.grid5000.collection+json",
                "clusters"
+               );
+       addLink(
+               reference.getPath(),
+               "self",
+               "application/vnd.grid5000.item+json",
+               "self"
                );
     }
 }

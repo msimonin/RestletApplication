@@ -3,7 +3,7 @@ package org.inria.myriads.grid;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import org.inria.myriads.rest.resource.grid.cluster.Cluster;
+import org.inria.myriads.cluster.Cluster;
 
 /**
  * 

@@ -1,9 +1,9 @@
-package org.inria.myriads.rest.resource.grid;
+package org.inria.myriads.rest.resource.cluster;
 
 import java.io.Serializable;
 
+import org.inria.myriads.cluster.Cluster;
 import org.inria.myriads.rest.resource.RESTfulItem;
-import org.inria.myriads.rest.resource.grid.cluster.Cluster;
 import org.restlet.data.Reference;
 
 /**
@@ -29,7 +29,7 @@ public class RESTfulCreateClusterResponse extends RESTfulItem implements Seriali
     public RESTfulCreateClusterResponse(Cluster cluster, Reference reference) 
     {
         super();
-        uuid_ = cluster.getUuid();
+        uuid_ = cluster.getUid();
         this.addLink(reference.getPath() + "/" + uuid_,
                 "self",
                 "application/vnd.grid5000.item+json",

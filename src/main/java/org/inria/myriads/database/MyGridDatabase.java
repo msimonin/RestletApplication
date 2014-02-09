@@ -1,10 +1,12 @@
 package org.inria.myriads.database;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
+import org.inria.myriads.cluster.Cluster;
+import org.inria.myriads.exception.AlreadyDefinedClusterException;
+import org.inria.myriads.exception.ClusterNotFoundException;
 import org.inria.myriads.grid.Grid;
-import org.inria.myriads.rest.exception.AlreadyDefinedClusterException;
-import org.inria.myriads.rest.resource.grid.cluster.Cluster;
 
 /**
  * 
@@ -30,9 +32,9 @@ public class MyGridDatabase
         grid_ = new Grid();
         grid_.setName("MyGrid");
         Cluster cluster1 = new Cluster();
-        cluster1.setUuid("cluster1");
+        cluster1.setUid("cluster1");
         Cluster cluster2 = new Cluster();
-        cluster2.setUuid("cluster2");
+        cluster2.setUid("cluster2");
         grid_.addCluster(cluster1);
         grid_.addCluster(cluster2);
     }
@@ -77,15 +79,55 @@ public class MyGridDatabase
         ArrayList<Cluster> clusters = grid_.getClusters();
         for (Cluster registeredCluster : clusters)
         {
-            if (name.equals(registeredCluster.getUuid()))
+            if (name.equals(registeredCluster.getUid()))
             {
                 throw new AlreadyDefinedClusterException();
             }
         }
         Cluster cluster = new Cluster();
-        cluster.setUuid(name);
+        cluster.setUid(name);
         clusters.add(cluster);
         return cluster;
+    }
+
+    /**
+     * @param clusterId The cluster id to search.
+     * @return  The cluster if found.
+     * @throws ClusterNotFoundException Exception
+     */
+    public Cluster getCluster(String clusterId) throws ClusterNotFoundException 
+    {
+        ArrayList<Cluster> clusters = grid_.getClusters();
+        for (Cluster cluster : clusters)
+        {
+            if (cluster.getUid().equals(clusterId))
+            {
+                return cluster;
+            }
+        }
+        throw new ClusterNotFoundException();
+    }
+
+    /**
+     * 
+     * Delete a cluster.
+     * 
+     * @param clusterId     The cluster to delete
+     * @throws ClusterNotFoundException The exception
+     */
+    public void deleteCluster(String clusterId) throws ClusterNotFoundException
+    {
+        Iterator<Cluster> it = grid_.getClusters().iterator();
+        while (it.hasNext())
+        {
+           Cluster cluster = (Cluster) it.next();
+           if (cluster.getUid().equals(clusterId))
+           {
+               it.remove();
+               return;
+           }
+        }
+        throw new ClusterNotFoundException();
     }
     
     

@@ -16,6 +16,15 @@ public class RootResource extends CommonServerResource
     private static final Logger log_ = LoggerFactory.getLogger(RootResource.class);
     
     /**
+     * Constructor.
+     */
+    public RootResource()
+    {
+        getHeaders().put("Content-type",
+                "application/vnd.grid5000.item+json");
+        getHeaders().put("Allow", "GET");
+    }
+    /**
      * 
      *  Get root resource.
      * 
@@ -24,7 +33,7 @@ public class RootResource extends CommonServerResource
     @Get
     public RESTfulGridResource root()
     {   
-        setHeadersItem();
+        setHeaders();
         Grid grid = getBackend().getGrid();        
         return new RESTfulGridResource(grid, getRequest().getResourceRef());
         

@@ -2,13 +2,15 @@ package org.inria.myriads.restlet.resource;
 
 import java.util.ArrayList;
 
-import org.inria.myriads.rest.exception.AlreadyDefinedClusterException;
-import org.inria.myriads.rest.resource.grid.RESTfulClustersResource;
-import org.inria.myriads.rest.resource.grid.RESTfulCreateClusterResponse;
-import org.inria.myriads.rest.resource.grid.cluster.Cluster;
+import org.inria.myriads.cluster.Cluster;
+import org.inria.myriads.exception.AlreadyDefinedClusterException;
+import org.inria.myriads.rest.resource.cluster.RESTfulClusters;
+import org.inria.myriads.rest.resource.cluster.RESTfulCreateClusterResponse;
 import org.restlet.data.Status;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -17,16 +19,32 @@ import org.restlet.resource.Post;
  */
 public class ClustersResource extends CommonServerResource
 {
+    /** Define the logger. */
+    private static final Logger log_ = LoggerFactory.getLogger(ClustersResource.class);
+    
+    
+    /**
+     * Constructor.
+     */
+    public ClustersResource()
+    {
+        super();
+        getHeaders().put("Content-type",
+                "application/vnd.grid5000.collection+json");
+        getHeaders().put("Allow", "GET,POST");
+    }
+    
     /**
      * @return  The RESTfulClustersResource.
      */
     @Get
-    public RESTfulClustersResource getClusters()
+    public RESTfulClusters getClusters()
     {   
-        setHeadersCollection();
-        setHeadersAllow("GET,POST");
+        setHeaders();
         ArrayList<Cluster> clusters = getBackend().getClusters();
-        return new RESTfulClustersResource(clusters,  getRequest().getResourceRef());       
+        log_.warn(getRequest().getResourceRef().getPath());
+        log_.warn(getRequest().getResourceRef().toUri().getPath());
+        return new RESTfulClusters(clusters,  getRequest().getResourceRef());       
     }
     
     /**
@@ -39,6 +57,7 @@ public class ClustersResource extends CommonServerResource
     {
        try
        {
+           setHeaders();
            Cluster cluster = getBackend().createCluster(name);
            RESTfulCreateClusterResponse response =
                    new RESTfulCreateClusterResponse(cluster, getRequest().getResourceRef());

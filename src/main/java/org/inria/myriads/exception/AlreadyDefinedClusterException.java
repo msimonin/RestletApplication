@@ -1,4 +1,4 @@
-package org.inria.myriads.rest.exception;
+package org.inria.myriads.exception;
 
 /**
  * @author msimonin

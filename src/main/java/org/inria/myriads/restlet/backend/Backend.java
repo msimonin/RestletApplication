@@ -2,10 +2,10 @@ package org.inria.myriads.restlet.backend;
 
 import java.util.ArrayList;
 
+import org.inria.myriads.cluster.Cluster;
 import org.inria.myriads.database.MyGridDatabase;
+import org.inria.myriads.exception.AlreadyDefinedClusterException;
 import org.inria.myriads.grid.Grid;
-import org.inria.myriads.rest.exception.AlreadyDefinedClusterException;
-import org.inria.myriads.rest.resource.grid.cluster.Cluster;
 import org.inria.myriads.restlet.configurator.api.Configuration;
 
 
@@ -67,6 +67,18 @@ public class Backend
     public Cluster createCluster(String name) throws AlreadyDefinedClusterException 
     {
         return database_.createCluster(name);
+    }
+
+
+    /**
+     * 
+     * Gets the database.
+     * 
+     * @return The database.
+     */
+    public MyGridDatabase getDatabase()
+    {
+        return database_;
     }
 
 }

@@ -24,7 +24,7 @@ import org.inria.myriads.restlet.backend.Backend;
 import org.inria.myriads.restlet.configurator.ConfiguratorFactory;
 import org.inria.myriads.restlet.configurator.api.Configuration;
 import org.inria.myriads.restlet.configurator.api.Configurator;
-import org.inria.myriads.restlet.exception.ConfiguratorException;
+import org.inria.myriads.restlet.configurator.exception.ConfiguratorException;
 import org.inria.myriads.util.ErrorUtils;
 import org.inria.myriads.util.LoggerUtils;
 import org.restlet.Application;

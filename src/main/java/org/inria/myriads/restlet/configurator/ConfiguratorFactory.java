@@ -23,7 +23,7 @@ import java.io.IOException;
 
 import org.inria.myriads.restlet.configurator.api.Configurator;
 import org.inria.myriads.restlet.configurator.api.impl.JavaPropertyConfigurator;
-import org.inria.myriads.restlet.exception.ConfiguratorException;
+import org.inria.myriads.restlet.configurator.exception.ConfiguratorException;
 
 /**
  * Node configurator factory.

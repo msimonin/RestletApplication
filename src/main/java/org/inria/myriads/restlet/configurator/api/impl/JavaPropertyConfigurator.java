@@ -28,8 +28,8 @@ import java.util.Properties;
 import org.inria.myriads.communication.NetworkAddress;
 import org.inria.myriads.restlet.configurator.api.Configuration;
 import org.inria.myriads.restlet.configurator.api.Configurator;
+import org.inria.myriads.restlet.configurator.exception.ConfiguratorException;
 import org.inria.myriads.restlet.configurator.networking.NetworkingSettings;
-import org.inria.myriads.restlet.exception.ConfiguratorException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
