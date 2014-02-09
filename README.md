@@ -1,7 +1,8 @@
 RESTlet Sample Application
 ==========================
 
-This is an archetype with a application skeleton to demonstrate the use of the RESTlet framework.
+This is an archetype with an application skeleton to demonstrate the use of the RESTlet framework.
+It exposes a simple Restful API compatible with [Restfully](https://github.com/crohr/restfully).
 
 # Running from the sources
 
