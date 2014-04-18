@@ -4,6 +4,12 @@ RESTlet Sample Application
 This is an archetype with an application skeleton to demonstrate the use of the [RESTlet framework](http://restlet.org).
 It exposes a simple Restful API compatible with [Restfully](https://github.com/crohr/restfully).
 
+Versions : 
+
+For specific versions, checkout the corresponding tag.
+* 0.0.1 : "Hello world" application
+* current :The application present a "grid like" resource. A grid is composed of clusters of machines.
+
 # Running from the sources
 
 Clone the repository
@@ -26,7 +32,6 @@ java -jar uber[...] ../configs/application.cfg ../configs/log4j.xml
 
 Test it :
 
-The application present a "grid like" resource. A grid is composed of clusters of machines.
 
 * root resources : ```curl localhost:4001/1.0```
 * clusters resources: ```curl localhost:4001/1.0/clusters```
