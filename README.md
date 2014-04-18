@@ -6,52 +6,32 @@ It exposes a simple Restful API compatible with [Restfully](https://github.com/c
 
 # Running from the sources
 
-Clone the repository, compile, run and test.
-
-# Getting the archetype 
-
-Alternatively, if you want to integrates this to your work you can download the archetype skeleton.
-```
-mvn archetype:generate -DarchetypeCatalog=http://snooze.inria.fr/maven
-```
-
-## Compiling 
-
-
-Move to the root directory, you should see : 
+Clone the repository
 
 ```
-.
-├── compile.sh
-├── configs
-├── LICENSE
-├── pom.xml
-├── README.md
-├── src
-└── target
+git clone https://github.com/msimonin/RestletApplication
+cd RestletApplication
 ```
-
-and run 
+compile it
 
 ```
-mvn package
+./compile.sh
 ```
-
-## Running it
 
 Go to the target directory and launch : 
 
 ```
-java -jar uber[...] ../configs/application.cfg yourlogfile
+java -jar uber[...] ../configs/application.cfg ../configs/log4j.xml
 ```
 
-## Test it 
+Test it :
 
-Open another shell and run : 
+The application present a "grid like" resource. A grid is composed of clusters of machines.
 
-```
-curl localhost:4001/1.0
-```
+* root resources : ```curl localhost:4001/1.0```
+* clusters resources: ```curl localhost:4001/1.0/clusters```
+* add cluster with a ```POST``` request, remove on with a ```DELETE``` ...
+
 
 or use Restfully :
 ```
@@ -94,5 +74,37 @@ or use Restfully :
 => nil
 
 ```
+
+
+# Getting the archetype 
+
+Alternatively, if you want to integrates this to your work you can download the archetype skeleton.
+```
+mvn archetype:generate -DarchetypeCatalog=http://snooze.inria.fr/maven
+```
+
+## Compiling 
+
+
+Move to the root directory, you should see : 
+
+```
+.
+├── compile.sh
+├── configs
+├── LICENSE
+├── pom.xml
+├── README.md
+├── src
+└── target
+```
+
+and run 
+
+```
+mvn package
+```
+
+
 
 
