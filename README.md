@@ -30,7 +30,7 @@ The application present a "grid like" resource. A grid is composed of clusters o
 
 * root resources : ```curl localhost:4001/1.0```
 * clusters resources: ```curl localhost:4001/1.0/clusters```
-* add cluster with a ```POST``` request, remove on with a ```DELETE``` ...
+* add cluster with a ```POST``` request, remove one with a ```DELETE``` ...
 
 
 or use Restfully :
