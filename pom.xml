@@ -123,61 +123,27 @@
   
 </build>
   
-  <dependencies>
-	<dependency>
-	  <groupId>org.slf4j</groupId>
-	  <artifactId>jul-to-slf4j</artifactId>
-	  <version>1.6.3</version>
-	</dependency>
-        
-	<dependency>
-	    <groupId>org.slf4j</groupId>
-	    <artifactId>slf4j-api</artifactId>
-	    <version>1.6.3</version>
-	</dependency>
-
-	<dependency>
-	    <groupId>org.slf4j</groupId>
-	    <artifactId>slf4j-log4j12</artifactId>
-	    <version>1.6.3</version>
-	</dependency>
+	<dependencies>
+	    <dependency>
+	        <groupId>org.restlet.jse</groupId>
+	        <artifactId>org.restlet</artifactId>
+	        <version>2.1.1</version>  
+	    </dependency>
 	
+		<dependency>
+		    <groupId>org.restlet.jse</groupId>
+		    <artifactId>org.restlet.ext.json</artifactId>
+		    <version>2.1.1</version>  
+		</dependency>
 	
-	 <dependency>
-        <groupId>org.restlet.jse</groupId>
-        <artifactId>org.restlet</artifactId>
-        <exclusions> 
-            <exclusion>
-                <groupId>org.osgi</groupId>
-                <artifactId>org.osgi.core</artifactId>
-            </exclusion> 
-        </exclusions>
-        <version>2.1.1</version>  
-    </dependency>
-
-       <dependency>
-           <groupId>org.restlet.jse</groupId>
-           <artifactId>org.restlet.ext.jackson</artifactId>
-           <version>2.1.1</version>  
-       </dependency>
-       
-       <dependency>
-           <groupId>org.restlet.jse</groupId>
-           <artifactId>org.restlet.ext.json</artifactId>
-           <version>2.1.1</version>  
-       </dependency>
-
-       <dependency>
-           <groupId>org.restlet.jse</groupId>
-           <artifactId>org.restlet.ext.slf4j</artifactId>
-           <version>2.1.1</version>  
-       </dependency>
-                       
-        <dependency>
-           <groupId>org.restlet.jse</groupId>
-           <artifactId>org.restlet.ext.httpclient</artifactId>
-           <version>2.1.1</version>  
-       </dependency>
-		
-  </dependencies>
+		<dependency>
+		    <groupId>org.restlet.jse</groupId>
+		    <artifactId>org.restlet.ext.xml</artifactId>
+		    <version>2.1.1</version>  
+		</dependency>
+	
+	</dependencies>
+  
+  
+  
 </project>
