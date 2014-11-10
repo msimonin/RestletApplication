@@ -158,11 +158,11 @@ Vous pouvez tester votre implémentation à l'aide de l'outil ```curl``` disponi
 exemple :
 ``` bash
 # doit retourner la liste de tous les utilisateurs
-
-# doit retourner les infos de l'utilisateur d'id 1
-
-# doit ajouter un utilisateur
-
+curl http://localhost:8124/users
+# doit retourner les infos de l'utilisateur d'id 1 (s'il existe - 404 sinon)
+curl http://localhost:8124/users/1
+# doit ajouter un utilisateur (on ajoute les headers spécifiques au JSON)
+curl -X POST -H 'Content-type:application/json' -H 'Accept:application/json' -d '{"name": "john", "age":25}' http://localhost:8124/users
 ```
 
 
