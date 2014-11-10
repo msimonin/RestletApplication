@@ -15,7 +15,7 @@ La figure présente une vision d'ensemble de l'architecture utilisée dans le TP
 
 ![Architecture](API.png)
 
-## API
+### API
 
 Le tableau regroupe les resources exposées par le système ainsi que les opérations associées.
 
@@ -30,7 +30,7 @@ URI | action  | description
 
 Pour simplifier l'API acceptera exclusivement que le JSON. C'est à dire qu'elle n'accepte que des messages au format JSON et ne répond qu'en JSON également.
 
-## RAML
+### RAML
 
 Le RAML[[2]](http://raml.org/) est un langage de description et de mise au point d'API REST.
 Voici la description RAML de l'application qui détaille un peu plus le tableau donné précédemment.
@@ -132,7 +132,7 @@ baseUri: http://localhost:8124
 
 ```
 
-## Implementation
+## Implémentation
 
 ### Squelette du projet
 
@@ -161,7 +161,7 @@ curl http://localhost:8124/users/1
 curl -X POST -H 'Content-type:application/json' -H 'Accept:application/json' -d '{"name": "john", "age":25}' http://localhost:8124/users
 ```
 
-## ROADMAP
+### ROADMAP
 
 * L'implémentation de ```POST```sur ```/users``` est fausse, la corriger (1 mot à ajouter quelque part ...)
 
