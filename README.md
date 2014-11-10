@@ -11,7 +11,6 @@ Dans ce TP nous utiliserons le framework RESTlet [[1]](http://restlet.com/) pour
 
 La figure présente une vision d'ensemble de l'architecture utilisée dans le TP.
  Chaque client effectuant des actions sur l'API voit sa requête (1) routée vers la bonne ressource (une instance d'une sous-classe de ServerResource) et (2) se voit attribuer un thread exécutant la méthode prévue (correspondant à GET, POST, DELETE ...).
- La
 
 ![Architecture](API.png)
 
@@ -168,5 +167,6 @@ exemple :
 
 ## References
 
-[1] RESTlet Framework http://restlet.com/
-[2] RAML http://raml.org/
+* [1] RESTlet Framework http://restlet.com/
+
+* [2] RAML http://raml.org/
