@@ -5,6 +5,18 @@ Les sources sont disponibles sur  [Github](https://github.com/msimonin/RestletAp
 
 Note : msimonin/RestletApplication branche TP
 
+Le plan de l'énoncé est le suivant. La partie ROADMAP contient le cheminement à suivre.
+
+* Architecture
+  * API
+  * RAML
+* Implémentation
+  * Squelette du projet
+  * Tester l'implémentation
+  * ROADMAP
+* References
+* License
+
 ## Architecture
 
 
