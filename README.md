@@ -1,6 +1,7 @@
 # My (simple) Twitter Application
 
-Les sources sont disponible sur  [Github](https://github.com/msimonin/RestletApplication/tree/TP).
+
+Les sources sont disponibles sur  [Github](https://github.com/msimonin/RestletApplication/tree/TP).
 
 Note : msimonin/RestletApplication branche TP
 
@@ -143,7 +144,7 @@ $) cd RestletApplication
 $) git checkout TP
 $) mvn package
 $) cd target
-$) java -jar ...
+$) java -jar uber-mta.jar
 ```
 
 ### Tester l'implémentation courante
@@ -170,3 +171,9 @@ exemple :
 * [1] RESTlet Framework http://restlet.com/
 
 * [2] RAML http://raml.org/
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
+
+Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.

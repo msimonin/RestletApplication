@@ -39,20 +39,8 @@ public class UsersResource extends ServerResource
     /**
      * 
      * Retourne la liste de tous les utilisateurs crée.
-     * [
-     *  {
-     *      "id": _ 
-     *      "name": _ 
-     *      "href": (lien vers /users/{id})
-     *  },
-        {
-     *      "id": _ 
-     *      "name": _ 
-     *      "href": (lien vers /users/{id})
-     *  }
-     * ]
-     * 
-     * @return
+     *
+     * @return  la representation JSON de tous les utilisateurs.
      * @throws JSONException
      */
     @Get("json")

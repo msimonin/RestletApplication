@@ -28,9 +28,9 @@ public interface Database
     
     /**
      * 
-     * Returns the list of users.
+     * Retourne la liste des utilisateurs.
      * 
-     * @return
+     * @return l'ensemble des utilisateurs 
      */
     Collection<User> getUsers();
 
