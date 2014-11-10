@@ -149,10 +149,6 @@ $) java -jar uber-mta.jar
 
 ### Tester l'implémentation courante
 
-L'implémentation initiale expose GET et POST de la resource ```/users```.
-Cette implémentation est volontairement fausse (c'est à vous de corriger !)
-mais donne les élèments de base qui vous permettront d'implémenter l'API conformément à la description RAML donnée.
-
 Vous pouvez tester votre implémentation à l'aide de l'outil ```curl``` disponible depuis la ligne de commande
 
 exemple :
@@ -164,6 +160,14 @@ curl http://localhost:8124/users/1
 # doit ajouter un utilisateur (on ajoute les headers spécifiques au JSON)
 curl -X POST -H 'Content-type:application/json' -H 'Accept:application/json' -d '{"name": "john", "age":25}' http://localhost:8124/users
 ```
+
+## ROADMAP
+
+* L'implémentation de ```POST```sur ```/users``` est fausse, la corriger (1 mot à ajouter quelque part ...)
+
+* Implémenter la classe ```UserResource``` exposant les informations d'un utilisateur
+
+* Implémenter la ressource permettant d'exposer les tweets des utilisateurs.
 
 
 ## References
