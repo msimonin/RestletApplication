@@ -148,7 +148,13 @@ baseUri: http://localhost:8124
 
 ### Squelette du projet
 
-* Importer le projet dans ```eclipse``` et compiler le.
+* Importer le projet dans ```eclipse``` et compiler le : 
+  * Fichier > import > project from git > URI : https://github.com/msimonin/RestletApplication
+  * Next > branche TP uniquement
+  * Next > 
+  * Next > import as general project
+  * Clic droit sur le projet > configure > convert as maven project
+  * Pour lancer clique droit sur Main.main > run as ... Java application
 * ou utiliser la ligne de commande :
 ```
 $) git clone https://github.com/msimonin/RestletApplication.git
