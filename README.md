@@ -154,7 +154,7 @@ baseUri: http://localhost:8124
   * Next > 
   * Next > import as general project
   * Clic droit sur le projet > configure > convert as maven project
-  * Pour lancer clique droit sur Main.main > run as ... Java application
+  * Pour lancer clic droit sur Main.main > run as ... Java application
 * ou utiliser la ligne de commande :
 ```
 $) git clone https://github.com/msimonin/RestletApplication.git
