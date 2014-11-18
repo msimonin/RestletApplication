@@ -2,6 +2,7 @@ package org.inria.restlet.mta.application;
 
 
 import org.inria.restlet.mta.resources.UserResource;
+import org.inria.restlet.mta.resources.UserTweetsResource;
 import org.inria.restlet.mta.resources.UsersResource;
 import org.restlet.Application;
 import org.restlet.Context;
@@ -29,6 +30,7 @@ public class MyTwitterApplication extends Application
         Router router = new Router(getContext());  
         router.attach("/users", UsersResource.class);
         router.attach("/users/{userId}", UserResource.class);
+        router.attach("/users/{userId}/tweets", UserTweetsResource.class);
         return router;  
     }
 
